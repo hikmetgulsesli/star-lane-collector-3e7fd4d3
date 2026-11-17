@@ -1,0 +1,567 @@
+{
+  "generatedAt": "2026-11-17T05:32:54.711Z",
+  "screenCount": 1,
+  "screens": {
+    "3667a686c80a4eec8951aa7cd567cd6d": {
+      "screenId": "3667a686c80a4eec8951aa7cd567cd6d",
+      "materialSymbolsRequired": false,
+      "sections": [
+        {
+          "tag": "header",
+          "layout": "flex-col",
+          "classes": [
+            "w-full",
+            "max-w-6xl",
+            "mx-auto",
+            "flex",
+            "flex-col",
+            "md:flex-row",
+            "items-center",
+            "justify-between",
+            "gap-4",
+            "border-b"
+          ],
+          "childCount": 8
+        },
+        {
+          "tag": "main",
+          "layout": "flex-col",
+          "classes": [
+            "w-full",
+            "max-w-6xl",
+            "mx-auto",
+            "flex-1",
+            "flex",
+            "flex-col",
+            "items-center",
+            "justify-center",
+            "relative"
+          ],
+          "childCount": 19
+        },
+        {
+          "tag": "footer",
+          "layout": "block",
+          "classes": [
+            "w-full",
+            "max-w-6xl",
+            "mx-auto",
+            "mt-6",
+            "pt-6",
+            "border-t",
+            "border-space-700/60"
+          ],
+          "childCount": 4
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Resume Round",
+          "classes": [
+            "w-full",
+            "py-3",
+            "px-6",
+            "rounded-xl",
+            "bg-gradient-to-r",
+            "from-cyanaccent-500",
+            "to-indigo-600",
+            "hover:from-cyanaccent-400",
+            "hover:to-indigo-500",
+            "text-white",
+            "font-bold",
+            "text-sm",
+            "tracking-wider",
+            "uppercase",
+            "shadow-lg",
+            "shadow-cyanaccent-500/25",
+            "transition-all"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Start Round",
+          "classes": [
+            "py-3",
+            "px-6",
+            "rounded-xl",
+            "bg-emerald-600",
+            "hover:bg-emerald-500",
+            "text-white",
+            "font-extrabold",
+            "text-sm",
+            "uppercase",
+            "tracking-wider",
+            "shadow-lg",
+            "shadow-emerald-600/30",
+            "transition-all",
+            "border",
+            "border-emerald-400/40"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Collect Star",
+          "classes": [
+            "py-3",
+            "px-6",
+            "rounded-xl",
+            "bg-gradient-to-r",
+            "from-staryellow-500",
+            "to-amber-500",
+            "hover:from-staryellow-400",
+            "hover:to-amber-400",
+            "text-space-950",
+            "font-black",
+            "text-sm",
+            "uppercase",
+            "tracking-wider",
+            "shadow-lg",
+            "shadow-staryellow-500/30",
+            "transition-all",
+            "border",
+            "border-yellow-200"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Restart Round",
+          "classes": [
+            "py-3",
+            "px-6",
+            "rounded-xl",
+            "bg-space-800",
+            "hover:bg-space-700",
+            "text-slate-200",
+            "font-bold",
+            "text-sm",
+            "uppercase",
+            "tracking-wider",
+            "border",
+            "border-space-700",
+            "shadow-md",
+            "transition-all"
+          ],
+          "icon": null,
+          "action": "reset",
+          "expectedBehavior": "reset visible value/state, with confirmation if destructive"
+        },
+        {
+          "kind": "button",
+          "label": "&larr; Move Left",
+          "classes": [
+            "py-2.5",
+            "px-5",
+            "rounded-lg",
+            "bg-space-800",
+            "hover:bg-space-700",
+            "text-slate-200",
+            "font-bold",
+            "text-xs",
+            "uppercase",
+            "tracking-wider",
+            "border",
+            "border-space-700",
+            "shadow-sm",
+            "transition-all"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Move Center",
+          "classes": [
+            "py-2.5",
+            "px-5",
+            "rounded-lg",
+            "bg-space-800",
+            "hover:bg-space-700",
+            "text-slate-200",
+            "font-bold",
+            "text-xs",
+            "uppercase",
+            "tracking-wider",
+            "border",
+            "border-space-700",
+            "shadow-sm",
+            "transition-all"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Move Right &rarr;",
+          "classes": [
+            "py-2.5",
+            "px-5",
+            "rounded-lg",
+            "bg-space-800",
+            "hover:bg-space-700",
+            "text-slate-200",
+            "font-bold",
+            "text-xs",
+            "uppercase",
+            "tracking-wider",
+            "border",
+            "border-space-700",
+            "shadow-sm",
+            "transition-all"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Open Settings (Collect Deck)",
+          "classes": [
+            "py-2",
+            "px-4",
+            "rounded-lg",
+            "bg-indigo-900/60",
+            "hover:bg-indigo-800/80",
+            "text-indigo-200",
+            "font-semibold",
+            "text-xs",
+            "tracking-wider",
+            "border",
+            "border-indigo-700/60",
+            "transition-all"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Open Settings (Center Slot)",
+          "classes": [
+            "py-2",
+            "px-4",
+            "rounded-lg",
+            "bg-indigo-900/60",
+            "hover:bg-indigo-800/80",
+            "text-indigo-200",
+            "font-semibold",
+            "text-xs",
+            "tracking-wider",
+            "border",
+            "border-indigo-700/60",
+            "transition-all"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Open Settings (Left Slot)",
+          "classes": [
+            "py-2",
+            "px-4",
+            "rounded-lg",
+            "bg-indigo-900/60",
+            "hover:bg-indigo-800/80",
+            "text-indigo-200",
+            "font-semibold",
+            "text-xs",
+            "tracking-wider",
+            "border",
+            "border-indigo-700/60",
+            "transition-all"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Open Settings (Right Slot)",
+          "classes": [
+            "py-2",
+            "px-4",
+            "rounded-lg",
+            "bg-indigo-900/60",
+            "hover:bg-indigo-800/80",
+            "text-indigo-200",
+            "font-semibold",
+            "text-xs",
+            "tracking-wider",
+            "border",
+            "border-indigo-700/60",
+            "transition-all"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Open Settings",
+          "classes": [
+            "py-2",
+            "px-4",
+            "rounded-lg",
+            "bg-indigo-900/60",
+            "hover:bg-indigo-800/80",
+            "text-indigo-200",
+            "font-semibold",
+            "text-xs",
+            "tracking-wider",
+            "border",
+            "border-indigo-700/60",
+            "transition-all"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Resume (Left Deck Slot)",
+          "classes": [
+            "py-2",
+            "px-4",
+            "rounded-lg",
+            "bg-cyan-900/60",
+            "hover:bg-cyan-800/80",
+            "text-cyan-200",
+            "font-semibold",
+            "text-xs",
+            "tracking-wider",
+            "border",
+            "border-cyan-700/60",
+            "transition-all"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Lane Controls: &larr; Move Left",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Settings & Overlay Shortcuts: Open Settings (Collect Deck)",
+          "classes": [],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [],
+      "navLinks": [],
+      "cards": [],
+      "icons": [],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {},
+      "fonts": [],
+      "layoutHints": {
+        "gridCols": 2,
+        "flexDirection": "col",
+        "gap": "4"
+      },
+      "behaviorContract": [
+        {
+          "kind": "button",
+          "label": "Resume Round",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Start Round",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Collect Star",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Restart Round",
+          "icon": null,
+          "action": "reset",
+          "expectedBehavior": "reset visible value/state, with confirmation if destructive"
+        },
+        {
+          "kind": "button",
+          "label": "&larr; Move Left",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Move Center",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Move Right &rarr;",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Open Settings (Collect Deck)",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Open Settings (Center Slot)",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Open Settings (Left Slot)",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Open Settings (Right Slot)",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Open Settings",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Resume (Left Deck Slot)",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Lane Controls: &larr; Move Left",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        },
+        {
+          "kind": "button",
+          "label": "Settings & Overlay Shortcuts: Open Settings (Collect Deck)",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "tabBar": [
+        {
+          "kind": "button",
+          "label": "Start Round",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Collect Star",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Restart Round",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Lane Controls: &larr; Move Left",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Move Center",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Move Right &rarr;",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Settings & Overlay Shortcuts: Open Settings (Collect Deck)",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Open Settings (Center Slot)",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Open Settings (Left Slot)",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Open Settings (Right Slot)",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Open Settings",
+          "icon": null,
+          "active": false
+        },
+        {
+          "kind": "button",
+          "label": "Resume (Left Deck Slot)",
+          "icon": null,
+          "active": false
+        }
+      ],
+      "title": "Play page root - Star Lane Collector"
+    }
+  }
+}

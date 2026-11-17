@@ -1,0 +1,147 @@
+[
+  {
+    "screenId": "3667a686c80a4eec8951aa7cd567cd6d",
+    "screenTitle": "Play page root - Star Lane Collector",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "button",
+        "label": "Resume Round",
+        "line": 129
+      },
+      {
+        "type": "button",
+        "label": "Start Round",
+        "line": 144
+      },
+      {
+        "type": "button",
+        "label": "Collect Star",
+        "line": 149
+      },
+      {
+        "type": "button",
+        "label": "Restart Round",
+        "line": 154
+      },
+      {
+        "type": "button",
+        "label": "&larr; Move Left",
+        "line": 164
+      },
+      {
+        "type": "button",
+        "label": "Move Center",
+        "line": 169
+      },
+      {
+        "type": "button",
+        "label": "Move Right &rarr;",
+        "line": 174
+      },
+      {
+        "type": "button",
+        "label": "Open Settings (Collect Deck)",
+        "line": 184
+      },
+      {
+        "type": "button",
+        "label": "Open Settings (Center Slot)",
+        "line": 189
+      },
+      {
+        "type": "button",
+        "label": "Open Settings (Left Slot)",
+        "line": 194
+      },
+      {
+        "type": "button",
+        "label": "Open Settings (Right Slot)",
+        "line": 199
+      },
+      {
+        "type": "button",
+        "label": "Open Settings",
+        "line": 204
+      },
+      {
+        "type": "button",
+        "label": "Resume (Left Deck Slot)",
+        "line": 209
+      }
+    ],
+    "navigation": [],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "Resume Round",
+        "line": 129
+      },
+      {
+        "type": "button",
+        "label": "Start Round",
+        "line": 144
+      },
+      {
+        "type": "button",
+        "label": "Collect Star",
+        "line": 149
+      },
+      {
+        "type": "button",
+        "label": "Restart Round",
+        "line": 154
+      },
+      {
+        "type": "button",
+        "label": "&larr; Move Left",
+        "line": 164
+      },
+      {
+        "type": "button",
+        "label": "Move Center",
+        "line": 169
+      },
+      {
+        "type": "button",
+        "label": "Move Right &rarr;",
+        "line": 174
+      },
+      {
+        "type": "button",
+        "label": "Open Settings (Collect Deck)",
+        "line": 184
+      },
+      {
+        "type": "button",
+        "label": "Open Settings (Center Slot)",
+        "line": 189
+      },
+      {
+        "type": "button",
+        "label": "Open Settings (Left Slot)",
+        "line": 194
+      },
+      {
+        "type": "button",
+        "label": "Open Settings (Right Slot)",
+        "line": 199
+      },
+      {
+        "type": "button",
+        "label": "Open Settings",
+        "line": 204
+      },
+      {
+        "type": "button",
+        "label": "Resume (Left Deck Slot)",
+        "line": 209
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 13,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  }
+]
