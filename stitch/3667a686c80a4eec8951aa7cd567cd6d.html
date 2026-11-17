@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Play page root - Star Lane Collector</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {"theme":{"extend":{"colors":{"space":{"950":"#050814","900":"#0b112c","800":"#121b44","700":"#1e2c69"},"staryellow":{"400":"#facc15","500":"#eab308"},"cyanaccent":{"400":"#38bdf8","500":"#0ea5e9"}}}}};
+  </script>
+</head>
+<body class="h-full bg-space-950 text-slate-100 font-sans antialiased overflow-x-hidden selection:bg-cyanaccent-500 selection:text-white">
+  <!-- Root Surface -->
+  <div data-surface-id="SURF_PLAY_ROOT" class="min-h-screen w-full flex flex-col justify-between bg-radial from-space-900 via-space-950 to-black p-4 md:p-8">
+    
+    <!-- Top HUD Bar -->
+    <header class="w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 border-b border-space-700/60 pb-6 mb-6">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyanaccent-500 to-staryellow-400 flex items-center justify-center shadow-lg shadow-cyanaccent-500/20 text-space-950 font-black text-xl">
+          *
+        </div>
+        <div>
+          <h1 class="text-xl font-extrabold tracking-wider text-white uppercase">Star Lane Collector</h1>
+          <p class="text-xs text-slate-400">Desktop Edition &bull; /play</p>
+        </div>
+      </div>
+
+      <!-- Displays HUD Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full md:w-auto">
+        <!-- Score Display -->
+        <div data-surface-id="SURF_SCORE_DISPLAY" class="bg-space-900/90 border border-space-700/80 rounded-xl px-4 py-2.5 shadow-inner flex flex-col items-center justify-center min-w-[110px]">
+          <span class="text-[10px] uppercase font-bold tracking-widest text-slate-400">Current</span>
+          <span class="text-lg font-black text-white">Score: 0</span>
+        </div>
+
+        <!-- High Score Display -->
+        <div data-surface-id="SURF_HIGH_SCORE_DISPLAY" class="bg-space-900/90 border border-staryellow-500/30 rounded-xl px-4 py-2.5 shadow-inner flex flex-col items-center justify-center min-w-[120px]">
+          <span class="text-[10px] uppercase font-bold tracking-widest text-staryellow-400">Best</span>
+          <span class="text-lg font-black text-staryellow-400">High score: 0</span>
+        </div>
+
+        <!-- Phase Display -->
+        <div data-surface-id="SURF_PHASE_DISPLAY" class="bg-space-900/90 border border-cyanaccent-500/30 rounded-xl px-4 py-2.5 shadow-inner flex flex-col items-center justify-center min-w-[110px]">
+          <span class="text-[10px] uppercase font-bold tracking-widest text-cyanaccent-400">Status</span>
+          <span class="text-lg font-black text-cyanaccent-400">Ready</span>
+        </div>
+
+        <!-- Lane Display -->
+        <div data-surface-id="SURF_LANE_DISPLAY" class="bg-space-900/90 border border-space-700/80 rounded-xl px-4 py-2.5 shadow-inner flex flex-col items-center justify-center min-w-[110px]">
+          <span class="text-[10px] uppercase font-bold tracking-widest text-slate-400">Position</span>
+          <span class="text-lg font-black text-purple-300">Lane 0</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Center Section: Game Scene + Settings Overlay -->
+    <main class="w-full max-w-6xl mx-auto flex-1 flex flex-col items-center justify-center relative">
+      
+      <!-- Status Message Display -->
+      <div data-surface-id="SURF_MESSAGE_DISPLAY" class="w-full max-w-xl mx-auto mb-4 py-2 px-6 rounded-lg bg-space-800/80 border border-cyanaccent-500/40 text-center text-sm font-semibold tracking-wide text-cyanaccent-400 shadow-md">
+        Ready to play. Use controls to navigate lanes.
+      </div>
+
+      <!-- Host Surface: SURF_GAME_SCENE -->
+      <div data-surface-id="SURF_GAME_SCENE" class="relative w-full max-w-3xl h-[420px] rounded-2xl bg-space-900/80 border-2 border-space-700/80 shadow-2xl overflow-hidden flex flex-col">
+        <!-- Background Grid Lines -->
+        <div class="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:100%_40px]"></div>
+
+        <!-- Three Lanes Visual Container -->
+        <div class="relative z-0 w-full h-full grid grid-cols-3 divide-x divide-space-700/60">
+          
+          <!-- Lane 0 (Left) -->
+          <div class="relative flex flex-col items-center justify-between py-6">
+            <span class="text-xs uppercase tracking-widest font-extrabold text-slate-500">Lane 0 &bull; Left</span>
+            
+            <!-- Contained Surface: SURF_PLAYER_MARKER placed in Lane 0 -->
+            <div data-surface-id="SURF_PLAYER_MARKER" class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-cyanaccent-500 to-indigo-600 border-2 border-white/60 shadow-xl shadow-cyanaccent-500/30 flex flex-col items-center justify-center p-2 text-center transform transition-transform">
+              <span class="text-xs font-black tracking-wider uppercase text-white">Player</span>
+              <span class="text-[10px] font-bold text-cyan-200">Lane 0</span>
+            </div>
+
+            <div class="h-6"></div>
+          </div>
+
+          <!-- Lane 1 (Center) -->
+          <div class="relative flex flex-col items-center justify-between py-6">
+            <span class="text-xs uppercase tracking-widest font-extrabold text-slate-500">Lane 1 &bull; Center</span>
+            
+            <!-- Contained Surface: SURF_STAR_MARKER located in Lane 1 -->
+            <div data-surface-id="SURF_STAR_MARKER" class="w-20 h-20 rounded-full bg-gradient-to-tr from-amber-400 via-staryellow-400 to-yellow-200 border-2 border-yellow-100 shadow-2xl shadow-staryellow-500/50 flex flex-col items-center justify-center p-2 text-center animate-pulse">
+              <span class="text-2xl text-space-950 font-black leading-none">&#9733;</span>
+              <span class="text-[10px] font-extrabold tracking-wider uppercase text-space-900 mt-1">Star</span>
+            </div>
+
+            <div class="h-6"></div>
+          </div>
+
+          <!-- Lane 2 (Right) -->
+          <div class="relative flex flex-col items-center justify-between py-6">
+            <span class="text-xs uppercase tracking-widest font-extrabold text-slate-500">Lane 2 &bull; Right</span>
+            <div class="flex-1 flex items-center justify-center">
+              <span class="text-xs text-slate-600 font-mono">Empty</span>
+            </div>
+            <div class="h-6"></div>
+          </div>
+        </div>
+
+        <!-- Contained Surface: SURF_SETTINGS_OVERLAY (Rendered, enabled, and pointer-operable as required by static completeness rules) -->
+        <div data-surface-id="SURF_SETTINGS_OVERLAY" class="absolute inset-0 z-20 bg-space-950/85 backdrop-blur-sm flex flex-col items-center justify-center p-6 border-2 border-indigo-500/30">
+          <div class="max-w-md w-full bg-space-900 border border-space-700 rounded-2xl p-6 shadow-2xl text-center">
+            <div class="w-12 h-12 mx-auto rounded-full bg-indigo-500/20 border border-indigo-400/40 flex items-center justify-center text-indigo-400 font-bold mb-3">
+              &#9881;
+            </div>
+            <h2 class="text-xl font-bold text-white mb-1">Round Settings &amp; Pause</h2>
+            <p class="text-xs text-slate-400 mb-6">Manage game session controls and audio preferences.</p>
+
+            <div class="space-y-4 mb-6 text-left">
+              <div class="flex items-center justify-between p-3 rounded-lg bg-space-800/80 border border-space-700">
+                <span class="text-sm font-medium text-slate-200">Sound Effects</span>
+                <span class="text-xs text-cyanaccent-400 font-bold">Enabled</span>
+              </div>
+              <div class="flex items-center justify-between p-3 rounded-lg bg-space-800/80 border border-space-700">
+                <span class="text-sm font-medium text-slate-200">Lane Assist Feedback</span>
+                <span class="text-xs text-cyanaccent-400 font-bold">Active</span>
+              </div>
+            </div>
+
+            <!-- Primary Resume button in SURF_SETTINGS_OVERLAY -->
+            <button data-action="ACT_ACT_RESUME" data-control-slot="CSLOT_ACT_RESUME_CP_RESUME" class="w-full py-3 px-6 rounded-xl bg-gradient-to-r from-cyanaccent-500 to-indigo-600 hover:from-cyanaccent-400 hover:to-indigo-500 text-white font-bold text-sm tracking-wider uppercase shadow-lg shadow-cyanaccent-500/25 transition-all">
+              Resume Round
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bottom Action & Control Deck (Owning surface: SURF_PLAY_ROOT) -->
+    <footer class="w-full max-w-6xl mx-auto mt-6 pt-6 border-t border-space-700/60">
+      <div class="flex flex-col gap-5">
+        
+        <!-- Primary Action Tier -->
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <!-- Start Round Button -->
+          <button data-action="ACT_ACT_START" data-control-slot="CSLOT_ACT_START_CP_START" class="py-3 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm uppercase tracking-wider shadow-lg shadow-emerald-600/30 transition-all border border-emerald-400/40">
+            Start Round
+          </button>
+
+          <!-- Collect Star Button -->
+          <button data-action="ACT_ACT_COLLECT" data-control-slot="CSLOT_ACT_COLLECT_CP_COLLECT" class="py-3 px-6 rounded-xl bg-gradient-to-r from-staryellow-500 to-amber-500 hover:from-staryellow-400 hover:to-amber-400 text-space-950 font-black text-sm uppercase tracking-wider shadow-lg shadow-staryellow-500/30 transition-all border border-yellow-200">
+            Collect Star
+          </button>
+
+          <!-- Restart Round Button -->
+          <button data-action="ACT_ACT_RESTART" data-control-slot="CSLOT_ACT_RESTART_CP_RESTART" class="py-3 px-6 rounded-xl bg-space-800 hover:bg-space-700 text-slate-200 font-bold text-sm uppercase tracking-wider border border-space-700 shadow-md transition-all">
+            Restart Round
+          </button>
+        </div>
+
+        <!-- Lane Navigation Tier -->
+        <div class="flex flex-wrap items-center justify-center gap-3">
+          <span class="text-xs uppercase font-extrabold text-slate-400 mr-2">Lane Controls:</span>
+          
+          <!-- Move Left -->
+          <button data-action="ACT_ACT_MOVE_LEFT" data-control-slot="CSLOT_ACT_MOVE_LEFT_CP_MOVE_LEFT" class="py-2.5 px-5 rounded-lg bg-space-800 hover:bg-space-700 text-slate-200 font-bold text-xs uppercase tracking-wider border border-space-700 shadow-sm transition-all">
+            &larr; Move Left
+          </button>
+
+          <!-- Move Center -->
+          <button data-action="ACT_ACT_MOVE_CENTER" data-control-slot="CSLOT_ACT_MOVE_CENTER_CP_MOVE_CENTER" class="py-2.5 px-5 rounded-lg bg-space-800 hover:bg-space-700 text-slate-200 font-bold text-xs uppercase tracking-wider border border-space-700 shadow-sm transition-all">
+            Move Center
+          </button>
+
+          <!-- Move Right -->
+          <button data-action="ACT_ACT_MOVE_RIGHT" data-control-slot="CSLOT_ACT_MOVE_RIGHT_CP_MOVE_RIGHT" class="py-2.5 px-5 rounded-lg bg-space-800 hover:bg-space-700 text-slate-200 font-bold text-xs uppercase tracking-wider border border-space-700 shadow-sm transition-all">
+            Move Right &rarr;
+          </button>
+        </div>
+
+        <!-- Settings & Overlay Controls Deck -->
+        <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+          <span class="text-xs uppercase font-extrabold text-slate-400 mr-2">Settings &amp; Overlay Shortcuts:</span>
+
+          <!-- Open Settings - Primary Slot -->
+          <button data-action="ACT_ACT_OPEN_SETTINGS" data-control-slot="CSLOT_ACT_OPEN_SETTINGS_CP_COLLECT" class="py-2 px-4 rounded-lg bg-indigo-900/60 hover:bg-indigo-800/80 text-indigo-200 font-semibold text-xs tracking-wider border border-indigo-700/60 transition-all">
+            Open Settings (Collect Deck)
+          </button>
+
+          <!-- Open Settings - Move Center Slot -->
+          <button data-action="ACT_ACT_OPEN_SETTINGS" data-control-slot="CSLOT_ACT_OPEN_SETTINGS_CP_MOVE_CENTER" class="py-2 px-4 rounded-lg bg-indigo-900/60 hover:bg-indigo-800/80 text-indigo-200 font-semibold text-xs tracking-wider border border-indigo-700/60 transition-all">
+            Open Settings (Center Slot)
+          </button>
+
+          <!-- Open Settings - Move Left Slot -->
+          <button data-action="ACT_ACT_OPEN_SETTINGS" data-control-slot="CSLOT_ACT_OPEN_SETTINGS_CP_MOVE_LEFT" class="py-2 px-4 rounded-lg bg-indigo-900/60 hover:bg-indigo-800/80 text-indigo-200 font-semibold text-xs tracking-wider border border-indigo-700/60 transition-all">
+            Open Settings (Left Slot)
+          </button>
+
+          <!-- Open Settings - Move Right Slot -->
+          <button data-action="ACT_ACT_OPEN_SETTINGS" data-control-slot="CSLOT_ACT_OPEN_SETTINGS_CP_MOVE_RIGHT" class="py-2 px-4 rounded-lg bg-indigo-900/60 hover:bg-indigo-800/80 text-indigo-200 font-semibold text-xs tracking-wider border border-indigo-700/60 transition-all">
+            Open Settings (Right Slot)
+          </button>
+
+          <!-- Open Settings - Standard Slot -->
+          <button data-action="ACT_ACT_OPEN_SETTINGS" data-control-slot="CSLOT_ACT_OPEN_SETTINGS_CP_OPEN_SETTINGS" class="py-2 px-4 rounded-lg bg-indigo-900/60 hover:bg-indigo-800/80 text-indigo-200 font-semibold text-xs tracking-wider border border-indigo-700/60 transition-all">
+            Open Settings
+          </button>
+
+          <!-- Resume - Move Left Deck Slot -->
+          <button data-action="ACT_ACT_RESUME" data-control-slot="CSLOT_ACT_RESUME_CP_MOVE_LEFT" class="py-2 px-4 rounded-lg bg-cyan-900/60 hover:bg-cyan-800/80 text-cyan-200 font-semibold text-xs tracking-wider border border-cyan-700/60 transition-all">
+            Resume (Left Deck Slot)
+          </button>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
